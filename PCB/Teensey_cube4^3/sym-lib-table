@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "teensey_cube_symbols")(type "KiCad")(uri "${KIPRJMOD}/teensey_cube_symbols.kicad_sym")(options "")(descr ""))
+)
