@@ -79,12 +79,11 @@ void cube_init(){
         LEDS[i] = 0;
     }
 
-    MUX.begin(mux,4000);
+    MUX.begin(mux,400);
 
     SPI.begin(); //start up the SPI library
     SPI.setBitOrder(MSBFIRST); //Most Significant Bit First
     SPI.setDataMode(SPI_MODE0); // Mode 0 Rising edge of data, keep clock low
-    SPI.setClockDivider(SPI_CLOCK_DIV2); //Run the data in at 16MHz/2 - 8MHz
     digitalWrite(RCLK,LOW);
     //SPI.usingInterrupt(mux);
     interrupts();

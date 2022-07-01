@@ -1,5 +1,5 @@
 #include "mux.h"
-
+#include "functions.h"
 
 
 void setup() {
@@ -8,21 +8,21 @@ void setup() {
 
 void loop() {
 
-bitWrite(LEDS[0],0,1);
-bitWrite(LEDS[2],5,1);
-bitWrite(LEDS[5],2,1);
-bitWrite(LEDS[7],7,1);
-delay(1000);
+  for(int x=1;x<5;x++){
+    for(int y=1;y<5;y++){
+      for(int z=1;z<5;z++){
+        setLED(x,y,z,1);
+        delay(250);
+      }
+    }
+  }
 
-bitWrite(LEDS[0],0,0);
-bitWrite(LEDS[2],5,0);
-bitWrite(LEDS[5],2,0);
-bitWrite(LEDS[7],7,0);
-
-bitWrite(LEDS[1],0,1);
-bitWrite(LEDS[3],5,1);
-bitWrite(LEDS[4],2,1);
-bitWrite(LEDS[6],7,1);
-
-delay(1000);
+for(int x=1;x<5;x++){
+    for(int y=1;y<5;y++){
+      for(int z=1;z<5;z++){
+        setLED(x,y,z,0);
+        delay(250);
+      }
+    }
+  }
 }
